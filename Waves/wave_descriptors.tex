@@ -1,0 +1,142 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, graphicx}
+\graphicspath{ {D:/Education/ATMOCN_630/hw3/} }
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+\newcommand{\bigO}{\mathcal{O}}
+
+
+\begin{document}
+
+\title{\vspace{-4.0cm}Waves}
+\author{Ian Beckley
+\\University of Wisconsin-Madison}
+
+\date{2 Dec. 2020}
+
+\maketitle
+
+\section*{Descriptors}
+\subsection*{What is a Wave?}
+\begin{itemize}
+	\item Quasi-periodic
+	\item Transfer energy and momentum at large distances without transfer of fluid particles
+\end{itemize}
+
+\subsection*{Free/Forced}
+\begin{itemize}
+	\item Free waves are resonant normal modes, excited by weak random motions in the atmosphere
+	\item e.g., Hirota and Hirooka (1984), '5-Day Wave'
+	\item Forced waves require continuous forcing at compatible space ant time scales
+	\item e.g., Tides
+\end{itemize}
+
+\subsection*{Internal/External}
+\begin{itemize}
+	\item Internal: wave amplitude maximizes in the interior
+	\item Sinusoidal form for phase variation $\sim e^{i m_r z}$ which indicates sinusoidal variation in ther vertical
+	\item e.g., synoptic Rossby waves, internal gravity waves\\
+	\item External: wave amplitude maximizes at the edge ('evanescent waves' $\sim$ amplitude decays in space)
+	\item wave energy decreases away from the boundary $\sim e^{-m_i z}$
+	\item e.g.,  surface water waves (wave impact dampens away from the density gradient)
+\end{itemize}
+
+\subsection*{Stationary/Travelling}
+\begin{itemize}
+	\item Stationary $c_r = 0$
+	\item e.g. 'standing wave' (fixed node seiche, guitar string, etc)
+	\item Travelling $c_r \neq 0$
+\end{itemize}
+
+\subsection*{Steady/Transient}
+\begin{itemize}
+	\item Steady $c_i = 0$, fixed amplitude
+	\item Transient $c_i \neq 0$, amplitude varies in time (growth or decay)
+\end{itemize}
+
+\subsection*{Linear/Non-linear}
+\begin{itemize}
+	\item Linear (infinitesimal, theoretical)
+	\item Nonlinear (finite amplitude, observable)
+\end{itemize}
+
+Take the Eulerian and advective form of the Lagrangian time rate of change of $u$. The flow is 'self-steepening' in that over faster flow will 'catch up to' slower flow and, subsequently, break. This process is fundamental to chaos theory. Note, however, that if $\overline{u}$ is constant to first order, the total derivative is linearized ($u = \overline{u} + u'$).
+
+\begin{align*}
+\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} = 0 \text{ nonlinear advection, self-steepening with a tendency to break}\\
+\text{If} \frac{|u'|}{|\overline{u}|} \ll 1 \text{ where } u = \overline{u} + u' \text{ then}\\
+\frac{\partial u'}{\partial t} + \overline{u}\frac{\partial u'}{\partial x} = 0 \text{ advection linear in eddy amplitude $u'$, linearized operator}
+\end{align*}
+
+\subsection*{Dispersive/Non-dispersive}
+\begin{itemize}
+	\item Dispersive: propagation speed depends on wavelength
+	\item e.g., Rossby waves ($c = -\frac{\beta}{k^2} \propto L_x^2$)
+	\item Non-dispersive: all waves travel at the same speed, regardless of wavelength
+	\item e.g., linear shallow water waves, $c = \sqrt{gh}$; linear sound waves, $c = \sqrt{\gamma RT}$
+\end{itemize}
+
+\section*{Dispersion relation}
+\begin{itemize}
+	\item A \emph{dispersion relation} relates the time and space scales of a given wve type to physical parameters
+	\item Expressed as the functional dependence of frequency $\omega$ on size and physics ($\omega = \omega(\vec{k}\text{, physics})$)
+	\item If $\omega(k)$, waves travel at different speeds
+	\item Can also show how energy and wave crests move relative to one another
+	\item A \emph{critical surface} is defined where $c = \overline{u}$. This determines where wave energy emerges and cannot pass\
+	\item \emph{phase speed} ($c = \frac{\omega}{k}$) indicates how fast a wave crest or trough moves
+	\item \emph{group speed} ($G= \frac{\partial \omega}{\partial k}$) indicates how fast energy is moving
+\end{itemize}
+
+\section*{Wave Definitions}
+\subsection*{Phase}
+\emph{phase} is defined as $\theta = kx + ly+ mz - \omega t$, which is the definition of a plane in 3D place with a temporal dependence (wave on a given phase can travel relative to the three axis). Phase increases in the direction of propagation...or phase decreases in time as a wave crest passes (hence negative sign on $\omega t$ term.\\
+
+\subsection*{Disturbance}
+Take a generalized disturbance: $\psi = \text{Re}\left[Ce^{i\theta}\right] = \text{Re}\left[(C_r + iC_i)(\cos{\theta}+ i\sin{\theta})\right] = C_r \cos{\theta}- C_i\sin{\theta} = A\sin{\theta}+B\sin{\theta}$.
+
+\subsection*{Wavenumber Vector}
+
+\begin{align}
+\vec{k} = \nabla \theta = \hat{i}\frac{\partial \theta}{\partial x} + \hat{j}\frac{\partial \theta}{\partial y} + \hat{k} \frac{\partial \theta}{\partial z}
+\end{align}
+
+Recall over one wavelength $\partial \theta = 2\pi$, thus, $k = \frac{2\pi}{k}$ (same for meridional and vertical wave numbers)
+
+\begin{align*}
+|\vec{k}| = \sqrt{k^2 + l^2 + m^2}
+\end{align*}
+
+Since $\vec{k} = \nabla \theta$, $k \perp \theta$ pointing towards increasing $\theta$.\\
+
+$\therefore \,$ phase decreases with time at a point
+
+\subsection*{Frequency}
+$\omega = -\frac{\partial \theta}{\partial t}$ 'how fast $\theta$ varies in time. When $\omega > 0$ the wave is travelling to the east. When $\omega < 0$ the wave is travelling to the west. Though, we don't really talk about the sign of wave periodicity.
+
+In $\tau$ (one period), $\partial \theta  = 2\pi$, thus, $|\omega| = \frac{2\pi}{\tau}$
+
+\subsection*{Conservation of Wave Crests}
+The local rate of change of the wavenumber vector and the frequency gradient sum to zero, or,
+
+\begin{align*}
+\frac{\partial \vec{k}}{\partial t} + \nabla \omega = 0\\
+\frac{\partial}{\partial t}(\frac{\partial \theta}{\partial x}) + \frac{\partial}{\partial x}(-\frac{\partial \theta}{\partial t}) = 0
+\end{align*}
+
+This is easily interpreted through an example. If $\omega$ is decreasing to the east ($\nabla \omega > 0$) then $\vec{k}$ must decrease in time (longer waves reaching the point).
+
+\subsection*{Phase Velocity}
+This is the rate that a point on a phase surface travels in the direction of $\vec{k}$.
+
+\begin{align*}
+\vec{c_p} = \frac{\omega}{|\vec{k}|}\frac{\vec{k}}{|\vec{k}|} = \frac{\omega}{k^2 + l^2 + m^2}(k\hat{i} + l\hat{j} + m\hat{k})
+\end{align*}
+
+$\vec{c_p} \perp \theta$ and $\vec{c_p} \parallel \vec{k}$
+
+In 1D ($l = 0$, $m=0$), $c_p = {\omega k}{k^2}$
+
+
+
+\end{document}

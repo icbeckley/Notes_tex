@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, graphicx}
+\graphicspath{ {D:/Education/ATMOCN_630/hw3/} }
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+\newcommand{\bigO}{\mathcal{O}}
+
+
+\begin{document}
+
+\title{\vspace{-4.0cm}Dry Adiabatic Lapse Rate}
+\author{Ian Beckley
+\\University of Wisconsin-Madison}
+
+\date{28 Oct. 2020}
+
+\maketitle
+A \emph{lapse rate}, $\Gamma$, is defined as the rate at which temperature \emph{decreases} with height. 
+
+\begin{align}
+\Gamma = -\frac{dT}{dz} \sim \text{ K km}^{-1}
+\end{align}
+
+In order to derive the \emph{dry adiabatic lapse rate} we must first recall an application of the 2nd law of thermodynamics. That is,
+
+\begin{align}
+\rho c_p \frac{dT}{dt} = \frac{dp}{dt} + H
+\end{align}
+
+Recall that H represents diabatic processes diabatic processes, specifically, $H = Q - (\nabla \cdot \vec F) + \epsilon$, that is, heating related to chemical reactions and phase changes (latent heating), radiative heating and the conversion of kinetic energy to internal energy (thermalization).
+
+By definition, $H=0$ in adiabatic processes. This allows a substantial simplification of equation (2).
+
+\begin{align}
+\rho c_p \frac{dT}{dt} = \frac{dp}{dt}\\
+dt \rho c_p \frac{dT}{dt} = \frac{dp}{dt} dt\\
+\rho c_p dT = dp\\
+\frac{dT}{dp} = \frac{1}{\rho c_p}
+\end{align}
+
+Equation (6) defines the derivative of temperature with resepct to temperature, however we would like to derive temperature with resepect to height. Recall hydrostatic balance,
+
+\begin{align}
+\frac{dp}{dz} = -\rho g\\
+dp = -\rho g \, dz
+\end{align}
+
+Substituting (8) into the denominator of the LHS in (6),
+
+\begin{align*}
+\frac{dT}{-\rho g \, dz} = \frac{1}{\rho c_p}\\
+\frac{dT}{dz} = \frac{-\rho g}{\rho c_p}\\
+\frac{dT}{dz} = -\frac{g}{c_p}
+\end{align*}
+
+Thus, the dry adiabatic lapse rate is,
+
+\begin{align*}
+\boxed{\Gamma_d \approx 9.8 \text{ K km}^{-1}}
+\end{align*}
+
+\end{document}

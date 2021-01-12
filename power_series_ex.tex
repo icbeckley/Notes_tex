@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, graphicx}
+\graphicspath{ {D:/Education/ATMOCN_630/hw3/} }
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+\newcommand{\bigO}{\mathcal{O}}
+
+
+\begin{document}
+
+\title{\vspace{-4.0cm}Taylor Series Approximation}
+\author{Ian Beckley
+\\University of Wisconsin-Madison}
+\date{21 Sept. 2020}
+
+\maketitle
+
+\subsection*{Power Series Definition}
+A power series for a single variable is an infinite series of the form
+
+\begin{align*}
+\sum_{n=0}^{\infty} a_n (x-c)^n = a_0 + a_1 (x - c)^1 + a_2 (x-c)^2 + \text{...}
+\end{align*}
+
+where $a_n$ represents the coefficient of the $n$th term and c is the center constant. Power series are frequently applicable to geophysical problems when applied to infinitely differentiable functions. When applied as such, the power series approximation is known as Taylor series approximation, or Maclaurin series when $c = 0$. 
+
+For a Taylor series, $a_n$ is defined as 
+
+\begin{align*}
+a_n = \frac{f^{(n)}(c)}{n!}
+\end{align*}
+
+These approximations become very useful when $|x-c|$ is small, as one only needs $N$ terms of the expansion to issue a reasonable approximation. In the example below, note that $f^(n)$ terms get very small \emph{faster} than $(x-c)^n$ terms get large. A quick scale analysis reveals that only the first two terms are important to the result. The magnitude of $|x-c|$ determines the number of terms required for an approximation.
+
+\subsection*{Example taken from Petty (2008), 4.3}
+The following example demonstrates the use of a Taylor series approximation for evaluating the gravitational acceleration at some distance from the earth, $g(z)$.
+
+We are asked to perform a power series expansion on $g(z) = \frac{GM_{e}}{(r_{e} + z)^{2}}$ about $c=\frac{z}{r_{e}}$. Before we construct the power series, let's take the first, second and third derivatives of $g(x)$. 
+
+\begin{align}
+g\prime(z) = \frac{-2GM_{e}}{(r_{e} + z)^{3}}\\
+g\prime\prime(z) = \frac{6GM_{e}}{(r_{e} + z)^{4}}\\
+\end{align}
+
+Now we can construct a power series approximation for $g(z)$,
+
+\begin{align}
+g(z) \approx g(\frac{z}{r_e}) + g\prime(\frac{z}{r_{e}})\,(z-\frac{z}{r_{e}}) + \frac{g\prime\prime(\frac{z}{r_{e}})\,(z-\frac{z}{r_{e}})^{2}}{2}...\\
+g(z) \approx \frac{GM_{e}}{(r_e + \frac{z}{r_e})^{2}} - 2\frac{GM_{e}}{(r_e+\frac{z}{r_{e}})^{3}}(z-\frac{z}{r_{e}}) + 3\frac{GM_{e}}{(r_e+\frac{z}{r_{e}})^{4}}(z-\frac{z}{r_{e}})^{2}...
+\end{align}
+
+Given that the vast majority of the atmosphere's mass is contained within the troposphere, $\bigO{(z)} \epsilon \, 10^{4} \text{ m}$, while $\bigO{(r_{e})} \epsilon \, 10^6 \text{ m}$. Thus, $\frac{\bigO{(z)}}{\bigO{(r_{e})}} \epsilon \, 10^{-2} \text { m}$, and, $\frac{z}{r_{e}} \approx 0$. This can be substituted into equation (5) for a substantial simplification of the power series approximation for $g(z)$.
+
+\begin{align}
+g(z) \approx \frac{GM_{e}}{r_{e}^{2}} - 2\frac{GM_{e}}{r_e^{3}}z + 3\frac{GM_{e}}{r_{e}^{4}}z^{2}...
+\end{align}
+
+Additionally, $\bigO{(G)} \epsilon \, 10^{-11} \text{ m}^{2} \text{ kg}^{2}$ while $\bigO{(M_{e})} \epsilon \, 10^{24} \text{ kg}$, therefore $\bigO{(GM_{e}z)} \epsilon \, 10^{14} \text{ m}$ which is $\ll \bigO{(r_{e}^{4})}$. It is clear that we can drop the third term on the RHS of equation (88) with negligble effect on the resultant LHS.
+
+\begin{align}
+g(z) \approx \frac{GM_{e}}{r_{e}^{2}} - 2\frac{GM_{e}}{r_e^{3}}z\\
+g(z) \approx \frac{GM_{e}}{r_{e}^{2}}\left[1 - 2(\frac{z}{r_{e}})\right]
+\end{align}
+
+Recalling the definition of $g_{0}$,\\
+
+\begin{equation}
+\setlength\fboxsep{0.25cm}
+\setlength\fboxrule{0.4pt}
+\boxed{g(z) = g_{0}\left[1 - 2(\frac{z}{r_{e}})\right]}
+\end{equation}\\
+
+For reference, at 10 kilometers the error associated with assuming $g = 9.81 \text{ m s}^2$ is .3\%. By the time you've made it into the thermosphere (100 km), the associated error would still be a mere 3\%. For geophysical problems, treat gravity as a constant. 
+
+\end{document}

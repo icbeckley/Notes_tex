@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, graphicx}
+\graphicspath{ {D:/Education/ATMOCN_630/hw3/} }
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+\newcommand{\bigO}{\mathcal{O}}
+
+
+\begin{document}
+
+\title{\vspace{-4.0cm}Hypsometric Equation}
+\author{Ian Beckley
+\\University of Wisconsin-Madison}
+
+\date{12 Jan. 2021}
+
+\maketitle
+
+\subsection*{Hydrostatic Balance}
+Recall that the vertical pressure gradient force balances with the gravitational acceleration such that vertical motions are extremely limited over large-scales. This is known as hydrostatic balance.
+
+\begin{align}
+\frac{dw}{dt} = 0 = \rho g + \frac{\partial p}{\partial z}\\
+\boxed{-\rho g = \frac{\partial p}{\partial z}}
+\end{align}
+
+\subsection*{Hypsometric Equation}
+Begin by re-writing hydrostatic balance (2),
+
+\begin{align}
+-\rho g \partial z = \partial p
+\end{align}
+
+Recall that the ideal gas law can be written $\rho = \frac{p}{R_d T}$, thus (3) becomes
+
+\begin{align}
+-\frac{pg}{R_d T} \partial z = \partial p\\
+-\frac{g}{R_d T} \partial z = \frac{1}{p} \partial p\\
+-\frac{g}{R_d T} \int_{z_1}^{z_2} \partial z = \int_{p_1}^{p_2} \frac{1}{p} \partial p\\
+-\frac{g}{R_d T} \Delta z = \ln{p_2} - \ln{p_1}\\
+\boxed{\Delta z =\frac{R_d \overline{T_v}}{g} \ln{\frac{p_1}{p_2}}}
+\end{align}
+
+Where $p_1 > p_2$
+
+\subsection*{Virtual Temperature}
+Notice that in (8) $T$ appears in the numerator. This suggests that the thickness of a layer directly proportional to the temperature of the layer. Deciding on a value for $T$, however, is easier said than done. (8) is typically evaluated using a mean layer virtual temperature, $\overline{T_v}$. Referenced equations in the derivation below are from Petty (2008).
+
+
+We begin with equation (3.43), the total pressure of moist air.
+
+\begin{align}
+p = p_{d} + e = (\rho_{d}R_{d} + \rho_{v}R_{v})T
+\end{align}
+
+Next, we multiply equation (1) by $\frac{\rho R_{d}}{\rho R_{d}}$,
+
+\begin{align}
+p\frac{\rho R_{d}}{\rho R_{d}} =  (\rho_{d} R_{d} + \rho_{v} R_{v})T \text{  } \frac{\rho R_{d}}{\rho R_{d}}\\
+p = \rho R_{d}\frac{ (\rho_{d}R_{d} + \rho_{v}R_{v})}{\rho R_{d}}T\\
+p = \rho R_{d}\left[\frac{\rho_{d} R_{d}}{\rho R_{d}} + \frac{\rho_{v} R_{v}}{\rho R_{d}}\right]T\\
+p = \rho R_{d}\left[\frac{\rho_{d}}{\rho} + \frac{\rho_{v} R_{v}}{\rho R_{d}}\right]T
+\end{align}
+
+Substituting $\frac{R_{v}}{R_{d}}$ for $\frac{1}{\epsilon}$ and $\frac{\rho_{v}}{\rho}$ for $q$ within equation (13),
+
+\begin{align}
+p = \rho R_{d}\left[\frac{\rho_{d}}{\rho} + \frac{1}{\epsilon}q\right]T
+\end{align}
+
+$\frac{\rho_{d}}{\rho} = 1 - \frac{\rho_{v}}{\rho}$, and this may be substituted into equation (14),
+
+\begin{align}
+p = \rho R_{d}\left[1 - \frac{\rho_{v}}{\rho} + \frac{1}{\epsilon}q\right]T
+\end{align}
+
+$\frac{\rho_{v}}{\rho} = q$ may then be substituted into equation (15),
+
+\begin{align}
+p = \rho R_{d}\left[1 - q + \frac{1}{\epsilon}q\right]T
+\end{align}
+
+A simple rearrangement of the sum within the bracketed term yields,
+
+\begin{align}
+p = \rho R_{d}\left[1 + \frac{1}{\epsilon}q - q\right]T
+\end{align}
+
+$q$ can then be factored from the second and third terms of the bracketed term,
+
+\begin{align}
+p = \rho R_d\left[1 + (\frac{1}{\epsilon} - 1)q\right]T
+\end{align}
+
+(18) is identical to the Ideal Gas Law for dry air, except for the bracketed term scaling $R_d$. It turns out that the bracketed term is used to scale $R_d$ in order to adjust the gas constant for the prescence of water vapor. We can, however, use the scaling term on $T$, producing a 'virtual' temperature which accounts for the prescence of water vapor. Thus the virtual temperature is defined as
+
+\begin{align}
+\boxed{T_v = \left[1 + (\frac{1}{\epsilon} - 1)q\right]}
+\end{align}
+
+where $q$ is the specific humidity (recall specific humidity $\approx$ mixing ratio) and $\epsilon = \frac{R_d}{R_v} \approx .622$. A good approximation for (18) is Petty (3.50),
+
+\begin{align}
+T_v \approx (1 + .061q)T
+\end{align}
+ 
+\end{document}

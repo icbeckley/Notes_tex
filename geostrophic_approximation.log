@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.7)  4 DEC 2020 01:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.7)  12 JAN 2021 18:03
 entering extended mode
-**./rot_nav_stok.tex
-(rot_nav_stok.tex
+**./geostrophic_approximation.tex
+(geostrophic_approximation.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18>
 (C:\Users\icbeckley\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -128,8 +128,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count187
 \l__pdf_internal_box=\box47
-) (rot_nav_stok.aux)
-\openout1 = `rot_nav_stok.aux'.
+)
+No file geostrophic_approximation.aux.
+\openout1 = `geostrophic_approximation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -179,40 +180,37 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 (C:\Users\icbeckley\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (57.5575pt too wide) in paragraph at lines 42--44
-[]$[] \OT1/cmr/m/n/12 = []$ is the ve-loc-ity in a ro-tat-ing frame while $[] =
- []\OML/cmm/m/it/12 isthevelocityinafixedframe$\OT1/cmr/m/n/12 .
- []
-
 [1
 
-{C:/Users/icbeckley/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-[3] [4] [5] [6] (rot_nav_stok.aux) ) 
+{C:/Users/icbeckley/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (0.47928pt too wide) in paragraph at lines 59--60
+\OT1/cmr/m/n/12 Another ren-di-tion of the non-divergence the-o-rem is shown wi
+thin the "Navier-
+ []
+
+[2] [3] (geostrophic_approximation.aux) ) 
 Here is how much of TeX's memory you used:
- 2285 strings out of 480790
- 30369 string characters out of 2895426
- 271250 words of memory out of 3000000
- 18301 multiletter control sequences out of 15000+200000
- 540842 words of font info for 57 fonts, out of 3000000 for 9000
+ 2280 strings out of 480790
+ 30323 string characters out of 2895426
+ 269276 words of memory out of 3000000
+ 18299 multiletter control sequences out of 15000+200000
+ 540188 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,15n,31p,532b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/icbeckley/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/icbeckley/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/icbeckl
-ey/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/icbeckley/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/icbeckley/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/i
-cbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+ 30i,15n,31p,345b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/icbeckley/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/icbeckley/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ic
+beckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmti12.pfb>
-Output written on rot_nav_stok.pdf (6 pages, 143805 bytes).
+cm/cmmi8.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/icbeckley/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/icbeckley/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/icbeckle
+y/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on geostrophic_approximation.pdf (3 pages, 105804 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,7 +22,7 @@ Begin with the three dimensional Navier-Stokes equation in a fixed reference fra
 \frac{d \vec V}{dt} = \vec g - \frac{1}{\rho}\nabla p + \upsilon \nabla^2 \vec V
 \end{align}
 
-Equation (1) states that the acceleration of the wind vector is caused by the gravitational acceleration, the pressure gradient force (alternatively, the height gradient force) and molecular viscosity. The representation of $\vec V$, however, depends on the reference frame of the observer. Seen from a distant star, winds on earth would appear to accelerate inward towards their axis of rotation. This conflict forces the further consideration of forces when $\vec V$ is seen from a rotating reference frame. 
+Equation (1) states that the acceleration of the wind vector is caused by the gravitational acceleration, the pressure gradient force (alternatively, the height gradient force) and molecular viscosity. The representation of $\vec V$, however, depends on the reference frame of the observer. Seen from a distant star, winds on earth would appear to accelerate inward toward the axis of rotation. This conflict forces the further consideration of forces when $\vec V$ is seen from a rotating reference frame. 
 
 We will show (with help from Holton and others), that the inward radial acceleration of the winds can be combined with gravity (they act in the same direction) into a single term, effective gravity. Additionally, the coriolis force, the torque acting upon the winds due to the rotation of the earth, yields four additional terms. Finally, six curvature terms are introduced via the acceleration of the unit vectors themselves (see Holton).
 
@@ -39,8 +39,8 @@ We begin by defining several necessary variables,
 \vec \Omega \times (\vec \Omega \times \vec r) = \Omega^{2} r
 \end{align*}
 
-$\vec{V} = \frac{d\vec{x}}{dt}$ is the velocity in a rotating frame while $\vec{V_f} = \frac{d_fx}{dt} is the velocity in a fixed frame$.
-for any vector $\vec{x}\, \,  \frac{d_fx}{dt} = \frac{dx}{dt} + (\Omega \times \vec{X})$
+$\vec{V} = \frac{d\vec{x}}{dt}$ is the velocity in a rotating frame while $\vec{V_f} = \frac{d_fx}{dt}$ is the velocity in a fixed frame.
+For any vector $\vec{x}$,   $\frac{d_fx}{dt} = \frac{dx}{dt} + (\Omega \times \vec{X})$
 
 
 therefor, 
@@ -52,13 +52,13 @@ therefor,
 \boxed{\frac{d_f\vec{V_f}}{dt} = \frac{d\vec{V}}{dt} + 2\vec{\Omega} \times \vec{V} - \Omega^2\vec{r} = \sum{F_r}}
 \end{align}
 
-or, in words, the time rate of change of the wind vector in a fixed reference frame is the sum of the Lagrangian (rotating) time rate of change in the wind vector, coreolis and centripital forces. Move the Lagrangian derivative to the LHS and isolate it while substituting the components of the fixed acceleration vector $\frac{d_f\vec{V_f}}{dt}$
+or, in words, the time rate of change of the wind vector in a fixed reference frame is the sum of the Lagrangian (rotating) time rate of change in the wind vector, coriolis and centripital forces. Move the Lagrangian derivative to the LHS and isolate it while substituting the components of the fixed acceleration vector $\frac{d_f\vec{V_f}}{dt}$
 
 \begin{align}
  \frac{d\vec{V}}{dt} = - 2\vec{\Omega} \times \vec{V} + \Omega^2\vec{r} + \vec{g} - \frac{1}{\rho}\nabla + \upsilon\nabla^2\vec{V}
 \end{align}
 
-or, in words, the Langrangian derivative of the wind vector is the sum of the coreolis, centripital, gravitational, pressure gradient, and viscous forces.
+or, in words, the Langrangian derivative of the wind vector is the sum of the coriolis, centripital, gravitational, pressure gradient, and viscous forces.
 
 \subsubsection*{Effective gravity}
 \begin{align}
@@ -80,10 +80,10 @@ since $\vec{g_{eff}} = \nabla \Phi$, and $\Phi_g + \Phi_c = \Phi$, it follows th
 
 The first term on the LHS $\sim 10 \text{ m s}^{-1}$ while the second term on the LHS $\sim 10^{-2} \text{ m s}^{-1}$. For most atmospheric applications $\vec{g}$ departs from $\vec{g_{eff}}$ by $.3\%$ allowing negligence of the second term for most large-scale geophysical problems. 
 
-The geoid departs from the sphere by $\frac{1}{300}$ such that the two poles are $\sim 21 \text{ km}$ closer to the center of the earth than the equator and experience a stronger vertical gravitational force. The second term on the RHS reveals that as $r$ increases the vertical centripital component in order to over power the natural decrease in gravity which would be experienced at large $r$. This is why the Mississippi flows 'uphill'.
+The geoid departs from the sphere by $\frac{1}{300}$ such that the two poles are $\sim 21 \text{ km}$ closer to the center of the earth than the equator and experience a stronger vertical gravitational force. The second term on the RHS reveals that as $r$ increases the vertical centripital component increases, balancing the natural decrease in gravity which would be experienced at large $r$. This is why the Mississippi flows 'uphill'.
 
-\subsubsection*{Coreolis force}
-Recall from (6) that the coreolis force is given
+\subsubsection*{Coriolis force}
+Recall from (6) that the coriolis force is given
 \begin{align}
 -2\Omega \times \vec{V} = -2\pi\begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ - & \cos\phi & \sin\phi \\ u & v & w \end{vmatrix}\\
 -2\Omega(w\cos\phi-v\sin\phi \hat{i} + u\sin\phi \hat{j} - ucos\phi\hat{k})
@@ -124,13 +124,13 @@ Additionally, Holton shows
 The equations of motion become,
 
 \begin{align}
-\frac{du}{dt} - uv\frac{\tan\phi}{a} + \frac{uw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + 2\Omega v\sim\phi - 2\Omega w\cos\phi + \upsilon\nabla^2 u\\
+\frac{du}{dt} - uv\frac{\tan\phi}{a} + \frac{uw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + 2\Omega v\sin\phi - 2\Omega w\cos\phi + \upsilon\nabla^2 u\\
 \frac{du}{dt} + u^2\frac{\tan\phi}{a} + \frac{vw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial y} - 2\Omega u \sin\phi + \upsilon\nabla^2 v\\
 \frac{dw}{dt} - \frac{u^2 + v^2}{a} = -g - \frac{1}{\rho}\frac{\partial p}{\partial z} + 2\Omega u \cos\phi
 \end{align}
 
 \subsubsection*{Hyrdostatic balance}
-In the vertical, the coriolis force $\sim 10^{-3}$, the curvature $\sim 10^{-5}$ and the viscous term $10^{-19}$. The vertical pressure gradient and gravitational forces, however, $\sim 10$. If there is no vertical acceleration the flow is said to be in \emph{hyrdostatic balance},
+In the vertical, the coriolis force $\sim 10^{-3}$, the curvature term $\sim 10^{-5}$ and the viscous term $\sim 10^{-19}$. The vertical pressure gradient and gravitational forces, however, $\sim 10$. If there is no vertical acceleration the flow is said to be in \emph{hyrdostatic balance},
 
 \begin{align}
 \frac{dw}{dt} = 0 = -g - \frac{1}{\rho}\frac{\partial p}{\partial z}\\
@@ -139,7 +139,7 @@ g = -\frac{1}{\rho}\frac{\partial p}{\partial z}\\
 \end{align}
 
 \subsubsection*{Geostrophic balance}
-In the horizontal, curvature terms $\sim 10^{-5}$ and $10^{-7}$ respectively. The $\cos\phi$ coreolis forcing in the zonal momentum equation $\sim 10^{-6}$ and the viscous term $\sim 10^{-16}$. The pressure gradient force and $\sin\phi$ coreolis forcings, however, $\sim 10^{-3}$. If $\frac{du}{dt} = 0$ the flow is said to be in \emph{geostrophic balance}.
+In the horizontal, curvature terms $\sim 10^{-5}$ and $10^{-7}$, respectively. The $\cos\phi$ coriolis forcing in the zonal momentum equation $\sim 10^{-6}$ and the viscous term $\sim 10^{-16}$. The pressure gradient force and $\sin\phi$ coriolis forcings, however, $\sim 10^{-3}$. If $\frac{du}{dt} = 0$ the flow is said to be in \emph{geostrophic balance}.
 Define $ f = 2\Omega\sin\phi$,
 
 \begin{align}

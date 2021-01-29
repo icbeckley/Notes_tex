@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.7)  12 JAN 2021 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.7)  29 JAN 2021 17:38
 entering extended mode
 **./rot_nav_stok.tex
 (rot_nav_stok.tex
@@ -182,32 +182,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/icbeckley/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-[3] [4] [5] [6] (rot_nav_stok.aux) ) 
+[3] [4] [5] [6] [7] [8] (rot_nav_stok.aux) ) 
 Here is how much of TeX's memory you used:
  2285 strings out of 480790
- 30363 string characters out of 2895426
+ 30311 string characters out of 2895426
  271250 words of memory out of 3000000
  18301 multiletter control sequences out of 15000+200000
  540842 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,15n,31p,529b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/icbeckley/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/icbeckley/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/icbeckl
-ey/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/icbeckley/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/icbeckley/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/i
-cbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmti12.pfb>
-Output written on rot_nav_stok.pdf (6 pages, 142703 bytes).
+<C:/Users/icbeckley/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/icbeckley/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users
+/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/icbeckley/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/icbeckley/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/icbeck
+ley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/U
+sers/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Users/icbeckley/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb>
+Output written on rot_nav_stok.pdf (8 pages, 159179 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -26,7 +26,7 @@ Equation (1) states that the acceleration of the wind vector is caused by the gr
 
 We will show (with help from Holton and others), that the inward radial acceleration of the winds can be combined with gravity (they act in the same direction) into a single term, effective gravity. Additionally, the coriolis force, the torque acting upon the winds due to the rotation of the earth, yields four additional terms. Finally, six curvature terms are introduced via the acceleration of the unit vectors themselves (see Holton).
 
-\subsection*{Planetary Vorticity and the geoid}
+\subsection*{Rotational and Curvature Effects}
 
 We begin by defining several necessary variables,
 
@@ -49,7 +49,7 @@ therefor,
 \frac{d_f\vec{V_f}}{dt} = \frac{d\vec{V_f}}{dt} + (\Omega \times \vec{X})\\
 \frac{d}{dt}(\vec{V} + \Omega \times \vec{x}) + \Omega \times (\Omega \times \vec{x})\\
 \frac{d\vec{V}}{dt} + 2\vec{\Omega} \times \vec{V} + (\Omega \times (\Omega \times \vec{x}))\\
-\boxed{\frac{d_f\vec{V_f}}{dt} = \frac{d\vec{V}}{dt} + 2\vec{\Omega} \times \vec{V} - \Omega^2\vec{r} = \sum{F_r}}
+\frac{d_f\vec{V_f}}{dt} = \frac{d\vec{V}}{dt} + 2\vec{\Omega} \times \vec{V} - \Omega^2\vec{r} = \sum{F_r}
 \end{align}
 
 or, in words, the time rate of change of the wind vector in a fixed reference frame is the sum of the Lagrangian (rotating) time rate of change in the wind vector, coriolis and centripital forces. Move the Lagrangian derivative to the LHS and isolate it while substituting the components of the fixed acceleration vector $\frac{d_f\vec{V_f}}{dt}$
@@ -120,14 +120,107 @@ Additionally, Holton shows
 \frac{\partial \hat{k}}{\partial t} = \frac{u}{a} \hat{i} + \frac{v}{a} \hat{j}
 \end{align}
 
-\subsection*{Equations of motion and synoptic balances}
+\subsection*{Expanded Form}
 The equations of motion become,
 
 \begin{align}
 \frac{du}{dt} - uv\frac{\tan\phi}{a} + \frac{uw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial x} + 2\Omega v\sin\phi - 2\Omega w\cos\phi + \upsilon\nabla^2 u\\
-\frac{du}{dt} + u^2\frac{\tan\phi}{a} + \frac{vw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial y} - 2\Omega u \sin\phi + \upsilon\nabla^2 v\\
+\frac{dv}{dt} + u^2\frac{\tan\phi}{a} + \frac{vw}{a} = -\frac{1}{\rho} \frac{\partial p}{\partial y} - 2\Omega u \sin\phi + \upsilon\nabla^2 v\\
 \frac{dw}{dt} - \frac{u^2 + v^2}{a} = -g - \frac{1}{\rho}\frac{\partial p}{\partial z} + 2\Omega u \cos\phi
 \end{align}
+
+\subsubsection*{Tangent Plane Approximation}
+
+Take a plane tangent to the earth at some point. This can be thought of as transforming the equations of motion into Cartesian coordinates (we have already done this). This assumes the following relationships between coordinate systems.
+
+\begin{align}
+x = a\lambda \cos(\phi_0)\\
+y = a(\phi-\phi_0)\\
+z = z
+\end{align}
+
+Additionally, as we have done before, we will assume the three dimensional wind in Cartesian coordinates.
+
+\begin{align}
+\vec{V} = u\hat{i} + v\hat{j} + w\hat{k}
+\end{align}
+
+The so called 'metric terms' (those which arise from accelerating unit vectors) will be neglected.
+
+Finally, we perform a Taylor series expansion on the scalar component of the Coriolis forcing, discarding higher order terms.
+
+\begin{align}
+2\Omega\sin(\phi) \approx 2\Omega\sin(\phi_0) + 2\Omega(\phi-\phi_0)\cos(\phi_0)
+\end{align}
+
+Taking $f = 2\Omega\sin(\phi)$ and $f_0 = 2\Omega\sin(\phi_0)$, we can also define $\beta = \frac{\partial f}{\partial y}$
+
+\begin{align}
+\beta = \frac{\partial f}{\partial y}\\
+= 2\Omega\frac{\partial\sin(\frac{y}{a}+\phi_0)}{\partial y}\\
+\beta = \frac{2\Omega\cos(\phi_0)}{a}
+\end{align}
+
+and re-write the Taylor series expansion, recalling that $\frac{y}{a} = (\phi-\phi_0)$
+
+\begin{align}
+f = f_0 + \beta y
+\end{align}
+
+The $f$ plane approximation neglects the $\beta$ term and assumes that the Coriolis forcing is constant. This is likely best suited for motions with relatively small meridional extent. Alternatively, the $\beta$-plane approximation retains both terms. Either way, the near zero acceleration of the vertical wind in an atmosphere in hydrostatic balance suggests that $|w| << |\vec{V_h}|$, and we can ignore the metric terms.
+
+\subsubsection*{Boussinesq Approximation}
+
+The Boussinesq approximation assumes that, to first order, $\nabla \rho \approx 0$. Ultimately, this allows for a simplifcation of the equations of motion such that we treat density as a constant except for minor instances of buoyancy (vertical). This is best suited for an incompressible fluid, wherein high pressure yields little to no change in the density of the fluid and pressure changes linearly with height. 
+\begin{align}
+\rho(x,y,z,t) \approx \rho_0 + \delta \rho(x,y,z,t)
+\end{align}
+
+Assuming that the fluid is in hydrostatic balance,
+
+\begin{align}
+\frac{\partial p_0}{\partial z} = -\rho_0 g
+\end{align}
+
+integrating $p$ leads to a similar representation of pressure.
+
+\begin{align}
+p(x,y,z,t) = p_0(z) + \delta p(x,y,z,t)
+\end{align}
+
+Recall that the gradient in rho was approximately zero. Similarly, we have assumed that horizontal fluctuations are small, albeit not always negligible. Differently, we assume that pressure has a vertical dependence, though we have yet to establish what that dependence is (linear, exponential, etc).
+
+Beginning with the equation of motion on a tangent plane, we can subsequently expand $p$ and $\rho$. 
+
+\begin{align}
+\frac{d\vec{V}}{dt} +  f\hat{k} \times \vec{V} = -\frac{1}{\rho}\nabla p\\
+(\rho_0 + \delta \rho) \left(\frac{d\vec{V}}{dt} +  f\hat{k} \times \vec{V}\right) = -\nabla \delta p - \frac{\partial p_0}{\partial z}\hat{k} - g(\rho_0 + \delta \rho)\hat{k}\\
+(\rho_0 + \delta \rho) \left(\frac{d\vec{V}}{dt} +  f\hat{k} \times \vec{V}\right) = -\nabla \delta p + \rho_0 g\hat{k} - (\rho_0 - \delta \rho)g\hat{k}\\
+(\rho_0 + \delta \rho) \left(\frac{d\vec{V}}{dt} +  f\hat{k} \times \vec{V}\right) = -\nabla \delta p - g\delta\rho\hat{k}
+\end{align}
+
+Assuming that $|\rho_0| >> |\delta\rho|$, we can neglect $\delta\rho$ on the LHS, reducing the above to 
+
+\begin{align}
+\frac{d\vec{V}}{dt} + 2\Omega \times \vec{V} = -\nabla \phi + b\hat{k}
+\end{align}
+
+where $\phi = \frac{\delta \rho}{\rho_0}$ and $b = -\frac{g\delta\rho}{\rho_0}$
+
+We can also simplify the mass continuity equation as follows
+
+\begin{align}
+\boxed{\frac{d\delta\rho}{dt} + (\rho_0 +\delta\rho)\nabla \cdot \vec{V} = 0}
+\end{align}
+
+We assume that time scales advectively such that the time derivative can be neglected. Dividing density out, 
+
+\begin{align}
+\boxed{\nabla \cdot \vec{V} = 0}
+\end{align}
+
+See Vallis (2017) for further discussion and a more detailed approximation.
+
 
 \subsubsection*{Hyrdostatic balance}
 In the vertical, the coriolis force $\sim 10^{-3}$, the curvature term $\sim 10^{-5}$ and the viscous term $\sim 10^{-19}$. The vertical pressure gradient and gravitational forces, however, $\sim 10$. If there is no vertical acceleration the flow is said to be in \emph{hyrdostatic balance},
